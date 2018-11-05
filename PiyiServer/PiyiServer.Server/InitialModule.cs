@@ -1,4 +1,6 @@
 ﻿using Nancy;
+using Newtonsoft.Json;
+using PiyiServer.Server.DataModel;
 
 namespace PiyiServer.Server
 {
@@ -9,8 +11,7 @@ namespace PiyiServer.Server
             Get["/Hello/{hello}"] = parameters =>
             {
                 string hello = parameters.hello;
-                //return JsonConvert.SerializeObject(new ResultModel(new Result(hello)));
-                return hello + "lkfw";
+                return JsonConvert.SerializeObject(new ResultModel(new SingleStringModel(hello)));
             };
 
             Get["/mm"] = parameters =>

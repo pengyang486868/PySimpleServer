@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace PiyiClient.TestClient
 {
@@ -12,18 +9,27 @@ namespace PiyiClient.TestClient
     {
         static void Main(string[] args)
         {
-            string serviceAddress = "http://192.168.1.41:3307/mm";
-            var request = (HttpWebRequest)WebRequest.Create(serviceAddress);
+            var server = "http://192.168.1.41:3307/";
+            var pattern = "Hello/hel";
+
+            //var request = (HttpWebRequest)WebRequest.Create(server + pattern);
+            var request = WebRequest.Create(server + pattern);
             request.Method = "GET";
             request.ContentType = "text/html;charset=UTF-8";
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            Stream myResponseStream = response.GetResponseStream();
-            StreamReader myStreamReader = new StreamReader(myResponseStream, Encoding.UTF8);
-            string retString = myStreamReader.ReadToEnd();
-            myStreamReader.Close();
-            myResponseStream.Close();
 
-            Console.WriteLine(retString);
+            var response = request.GetResponse();
+            var stream = response.GetResponseStream();
+
+            if (stream != null)
+            {
+                var sr = new StreamReader(stream, Encoding.UTF8);
+                var retString = sr.ReadToEnd();
+                sr.Close();
+                stream.Close();
+
+                Console.WriteLine(retString);
+            }
+
             Console.ReadKey();
         }
     }
