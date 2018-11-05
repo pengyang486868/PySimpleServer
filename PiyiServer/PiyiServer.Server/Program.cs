@@ -5,9 +5,9 @@ using Nancy.Hosting.Self;
 
 namespace PiyiServer.Server
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             var uri = new Uri("http://127.0.0.1");
             var port = "3307";

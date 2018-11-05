@@ -4,7 +4,7 @@ using PiyiServer.Server.DataModel;
 
 namespace PiyiServer.Server
 {
-    public class InitialModule:NancyModule
+    public class InitialModule : NancyModule
     {
         public InitialModule()
         {
@@ -18,6 +18,19 @@ namespace PiyiServer.Server
             {
                 //return JsonConvert.SerializeObject(new ResultModel(new Result(hello)));
                 return "i love u";
+            };
+
+            Get["/SetInnerStr/{Is}"] = parameters =>
+            {
+                //_innerStr = (string)parameters.Is;
+                StaticData.Current.Sentence = (string)parameters.Is;
+                return StaticData.Current.Sentence;
+            };
+
+            Get["/GetInnerStr"] = parameters =>
+            {
+                return StaticData.Current.Sentence + " yes";
+                //return "gw";
             };
         }
     }
