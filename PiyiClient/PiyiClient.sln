@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiyiClient.TestClient", "PiyiClient.TestClient\PiyiClient.TestClient.csproj", "{1974F311-8CC7-4041-B4D2-04E3D5E5DB2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiyiClient.AutoRefreshApp", "PiyiClient.AutoRefreshApp\PiyiClient.AutoRefreshApp.csproj", "{B7897CA8-F4A5-463D-AEB6-84A213ACBA2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1974F311-8CC7-4041-B4D2-04E3D5E5DB2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1974F311-8CC7-4041-B4D2-04E3D5E5DB2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1974F311-8CC7-4041-B4D2-04E3D5E5DB2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7897CA8-F4A5-463D-AEB6-84A213ACBA2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7897CA8-F4A5-463D-AEB6-84A213ACBA2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7897CA8-F4A5-463D-AEB6-84A213ACBA2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7897CA8-F4A5-463D-AEB6-84A213ACBA2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

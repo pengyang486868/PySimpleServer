@@ -32,6 +32,18 @@ namespace PiyiServer.Server
                 return StaticData.Current.Sentence + " yes";
                 //return "gw";
             };
+
+            Get["/SetControlStr/{Is}"] = parameters =>
+            {
+                //_innerStr = (string)parameters.Is;
+                StaticData.Current.Sentence = (string)parameters.Is;
+                return StaticData.Current.Sentence;
+            };
+
+            Get["/GetControlStr"] = parameters =>
+            {
+                return StaticData.Current.Sentence + " yes";
+            };
         }
     }
 }
